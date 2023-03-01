@@ -43,9 +43,8 @@ jobs:
             sonar.exclusions=**/node_modules/**/*,**/*.spec.ts,**/src/environments/*,**/src/setupJest.ts,**/src/main.ts,**/src/polyfills.ts
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
           folder: dist/budget-planner
           token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
